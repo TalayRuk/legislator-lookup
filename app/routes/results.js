@@ -1,7 +1,11 @@
+//after add the ENV.myApiKey in config/environment  import it here so we can use API key then add var key ...after that need to cancel server and run source .env then run ember s
+
+import config from '../config/environment';
 import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function(params) {
+    var key = config.myApiKey; //import it from config
     var url = 'http://congress.api.sunlightfoundation.com/legislators/locate?apikey=0aee23fb3b244c9683ec0f34b1a7fbe0&zip=' + params.zip;
     return Ember.$.getJSON(url).then(function(responseJSON) {
       return responseJSON.results;
