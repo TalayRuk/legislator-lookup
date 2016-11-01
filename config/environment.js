@@ -22,8 +22,9 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-
+  // add ENV.myApiKey here 
   if (environment === 'development') {
+    ENV.myApiKey = process.env.apiKey;
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
