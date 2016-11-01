@@ -7,7 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('results');
+  this.route('results', {path: '/results/:zip'});
+  //add {path:'/results ..'} as dynamic segment in the route URL which will have the zip code we got from user
 });
 
 export default Router;
