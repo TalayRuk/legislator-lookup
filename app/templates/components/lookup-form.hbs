@@ -1,1 +1,9 @@
-{{yield}}
+<h1>Legislator lookup</h1>
+
+<form>
+  <div class="form-group">
+    <label for="zip">zip</label>
+    {{input value=zip  id="zip"}}
+  </div>
+  <button class="btn btn-success" {{action 'zipLookup'}}>Submit</button>
+</form>
