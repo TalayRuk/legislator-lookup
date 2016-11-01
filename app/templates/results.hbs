@@ -1,1 +1,11 @@
-{{outlet}}
+<ul>
+  {{#each model as |legislator|}}
+  <li>
+    {{legislator.first_name}} {{legislator.last_name}} <br>
+    Contact: <a href= {{legislator.contact_form}}>{{legislator.contact_form}}</a>
+  </li>
+  {{/each}}
+</ul>
+
+<!-- these 3 properties already in theJSON from sunlightfoundation -->
+<!-- sidenote*** all APIs r different, some use JSON, XML or other format. Sunlight uses JSON the CORS, some uses JSONP approach & some API don't set up to receive requests or even support from web browsers -->

@@ -3,10 +3,10 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   actions: {
     zipLookup() {
-      var zips = {
+      var params = {
         zip: this.get('zip')
       };
-      this.sendAction('zipLookup', zips);
+      this.sendAction('zipLookup', params);
     }
   }
 });
